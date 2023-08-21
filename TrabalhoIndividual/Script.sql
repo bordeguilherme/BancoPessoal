@@ -1,5 +1,7 @@
+--Criação do Banco de Dados
 create database Detran_ST;
 
+--Criação da Tabela pessoa
 create table pessoa(
 	pes_cd_id serial,
 	pes_tx_nome varchar(50),
@@ -11,6 +13,7 @@ create table pessoa(
 	primary key (pes_cd_id)
 );
 
+--Criação da Tabela carro
 create table carro(
 	car_cd_id serial,
 	car_tx_modelo varchar(70),
@@ -25,6 +28,7 @@ create table carro(
 	foreign key (fk_pes_cd_id) references pessoa(pes_cd_id)
 );
 
+--Inclusão dos Valores da Tabela pessoa
 insert into pessoa (pes_cd_id, pes_tx_nome, pes_tx_cpf, pes_dt_datanasc, pes_tx_cidade, pes_tx_uf, pes_tx_pais)
 values ('1', 'Guilherme Borde Almeida', '155.272.358-03', '1999-04-21', 'Petrópolis', 'RJ', 'Brasil');
 
@@ -46,6 +50,7 @@ values ('6', 'Damiano David', '285.453.976-36', '1999-01-08', 'Roma', 'RM', 'It�
 insert into pessoa (pes_cd_id, pes_tx_nome, pes_tx_cpf, pes_dt_datanasc, pes_tx_cidade, pes_tx_uf, pes_tx_pais)
 values ('7', 'Arthur Antunes Coimbra', '845.292.867-78', '1953-03-03', 'Rio de Janeiro', 'RJ', 'Brasil');
 
+--Inclusão dos Valores da Tabela carro
 insert into carro (car_cd_id, car_tx_modelo, car_tx_marca, car_tx_placa, car_int_ano, car_tx_cddregistro, car_tx_ufregistro,
 car_tx_paisregistro, fk_pes_cd_id)
 values ('1', '325I Convertible', 'BMW', 'US1985', '1989', 'Los Angeles', 'CA', 'Estados Unidos da America', '5');
@@ -89,3 +94,20 @@ values ('10', '1949', 'Ford', 'US7821', '1950', 'Roma', 'RM', 'Itália', '6');
 insert into carro (car_cd_id, car_tx_modelo, car_tx_marca, car_tx_placa, car_int_ano, car_tx_cddregistro, car_tx_ufregistro,
 car_tx_paisregistro, fk_pes_cd_id)
 values ('11', 'Celica 2.0 GT', 'Toyota', 'LGL-4444', '1982', 'Rio de Janeiro', 'RJ', 'Brasil', '7');
+
+--Consulta para mostrar quantidade de carros por pessoa na ordem decrescente (de quem tem mais para quem tem menos)
+select fk_pes_cd_id, count (fk_pes_cd_id) as "qtd_de_carros"
+from carro
+group by fk_pes_cd_id
+order by qtd_de_carros desc;
+
+--Consulta para mostrar quais carros tem a pessoa de código (pes_cod_id) = 5 (no caso, W. Axl Rose)
+select *
+from carro
+where fk_pes_cd_id = 5
+
+--Consulta para mostrar em ordem alfabética o nome da pessoa e do modelo do(s) carro(s) que a pertence
+select pes_tx_nome, car_tx_modelo 
+from pessoa
+inner join carro on pessoa.pes_cd_id = carro.fk_pes_cd_id
+order by pes_tx_nome asc;
