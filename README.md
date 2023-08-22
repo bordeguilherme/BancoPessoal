@@ -35,10 +35,5 @@ Relacionamento de cardinalidade de 1 para 0,N.
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 Autor:<br/>
 Guilherme Borde Almeida
