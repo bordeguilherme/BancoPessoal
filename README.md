@@ -5,7 +5,7 @@ O banco de dados Detran-ST, ou Detran-Serratec, gerencia informações sobre a r
 <br/>
 Diagramas:
 <div align="center">
-<img src="https://github.com/bordeguilherme/BancoPessoal/assets/141193384/558875dd-215c-423a-ae56-a191ae3b4b0e" width="350px" />
+<img src="https://github.com/bordeguilherme/BancoPessoal/assets/141193384/558875dd-215c-423a-ae56-a191ae3b4b0e" width="500px" />
 </div>
 <div align="center">
 Modelo Conceitual
@@ -36,4 +36,4 @@ Relacionamento de cardinalidade de 1 para 0,N.
 <br/>
 <br/>
 Autor:<br/>
-Guilherme Borde Almeida
+<a href="https://github.com/bordeguilherme">Guilherme Borde Almeida</a>
