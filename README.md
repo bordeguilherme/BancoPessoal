@@ -5,7 +5,7 @@ O banco de dados Detran-ST, ou Detran-Serratec, gerencia informações sobre a r
 <br/>
 Diagramas:
 <div align="center">
-<img src="https://github.com/bordeguilherme/BancoPessoal/assets/141193384/558875dd-215c-423a-ae56-a191ae3b4b0e" width="500px" />
+<img src="https://github.com/bordeguilherme/BancoPessoal/assets/141193384/731bfe4b-4d88-4990-9c04-1aa010a5250b" width="350px" />
 </div>
 <div align="center">
 Modelo Conceitual
@@ -20,7 +20,7 @@ Pessoa possui de nenhum até muitos carros, enquanto carro possui um único dono
 <br/>
 <br/>
 <div align="center">
-<img src="https://github.com/bordeguilherme/BancoPessoal/assets/141193384/82de81e1-d660-42fe-84eb-9e151baa4105" width="500px" />
+<img src="https://github.com/bordeguilherme/BancoPessoal/assets/141193384/cccdeb54-1c3b-4518-a470-8352a36a0b18" width="500px" />
 </div>
 <div align="center">
 Modelo Lógico
